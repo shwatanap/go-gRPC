@@ -9,8 +9,7 @@ Bundler.require(*Rails.groups)
 module Client
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
-    config.autoloader = :classic
+    config.load_defaults 5.2
 
     config.paths.add Rails.root.join('app', 'gen', 'api', 'pancake', 'baker').to_s, eager_load: true
 
