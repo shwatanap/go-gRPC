@@ -1,8 +1,7 @@
 # go-gRPC
 書籍スターティングgRPCの写経を行うリポジトリ
 
-mkdir -p app/gen/api/pancake/baker
-
+.protoファイルから自動生成させるコマンド
 bundle exec grpc_tools_ruby_protoc \
     -I ../proto \
     --ruby_out=app/gen/api/pancake/baker \
