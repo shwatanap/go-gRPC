@@ -9,7 +9,10 @@ Bundler.require(*Rails.groups)
 module Client
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 5.2
+    config.autoloader = :classic
+
+    config.paths.add Rails.root.join('app', 'gen', 'pb', 'image', 'upload').to_s, eager_load: true
 
     # Configuration for the application, engines, and railties goes here.
     #
